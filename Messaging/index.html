@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+        <title id="title">Messaging</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="queries.css">
+    </head>
+    
+    <body>
+        
+        <div id="messages"></div>
+        
+        <div id="input-area">
+            <input type="text" id="textfield" class="textSize" onkeyup="enter(event)" placeholder="Enter Message Here">
+            <button id="send-button" class="textSize" onclick="send()">Send</button>
+        </div>
+        
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

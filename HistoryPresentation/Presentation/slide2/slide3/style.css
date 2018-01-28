@@ -1,0 +1,14 @@
+object {
+    height: 800px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 20%;
+}
+body {
+    background-color: goldenrod;
+}
+
+ 
+h1 {
+    text-align: center;
+}

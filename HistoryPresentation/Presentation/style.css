@@ -1,0 +1,19 @@
+canvas {
+    background-image: url('https://image.slidesharecdn.com/harlemrenart-150430081212-conversion-gate01/95/harlem-renaissance-art-10-638.jpg?cb=1430399602');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+html, body{
+    overflow:hidden;
+}
+
+img {
+    display: none;
+    width: 10px;
+    height: 100px;
+}
+
+

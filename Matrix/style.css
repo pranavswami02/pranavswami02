@@ -1,0 +1,16 @@
+canvas {
+    background-color: #000;
+}
+
+body {
+    margin: 0;
+}
+
+canvas {
+    cursor: none;
+    overflow: hidden;
+}
+
+img {
+    display: none;
+}

@@ -1,0 +1,31 @@
+#textfield  {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: 15%;
+    font-size: 150%;
+    background-color: black;
+    color: #00ff00;
+    display: block;
+}
+
+#textfield::placeholder {
+    color: #00ff00;
+}
+
+html, body {
+    background-image: url('matrix.jpg');
+}
+
+button {
+    margin-top: 10%;
+    width: 20%;
+    height: 5%;
+    margin-left: 40%;
+    font-size: 140%;
+    background-color: #4444ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 35%;
+    border-color: #4444ff;
+}

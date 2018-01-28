@@ -1,0 +1,52 @@
+#textfield {
+    margin-top: 10px;
+    width: 70%;
+    height: 50px;
+    float: left;
+    font-size: 200%;
+    border-radius: 20px;
+}
+
+#send-button {
+    width: 15%;
+    height: 40px;
+    float: right;
+    margin-right: 7.5%;
+    margin-top:15px;
+    background-color: #40a7cc;
+    font-size: 150%;
+    color: white;
+    border-radius: 10px;
+    transition: width, height, background-color 1s,1s,1s;
+}
+
+p {
+    color: #00ff00;
+}
+
+#send-button:hover {
+
+    margin-top:15px;
+    background-color: #65d6ff;
+    width: 25%;
+    margin-right: 2.5%;
+    height: 50px;
+    
+}
+
+#input-area {
+    position: absolute;
+    bottom: 0px;
+    height: 70px;
+    width: 100%;
+    background-color: black;
+}
+
+#messages {
+    position: absolute;
+    top: 0px;
+    bottom: 70px;
+    background-color: black;
+    width: 100%;
+    overflow-y: auto;
+}

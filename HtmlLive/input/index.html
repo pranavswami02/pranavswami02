@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Input</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <textarea cols="40" rows="5" placeholder="Enter the code inside your html tag here" id="textfield"></textarea>
+        
+        <button onclick="update()">Save</button>
+        
+        <script src='https://www.gstatic.com/firebasejs/4.9.0/firebase.js'></script>
+        <script>
+            
+            function encode(s) {
+                    temp = ''
+                for(var x=0;x<s.length;x++) {
+                    temp+=String.fromCharCode(s[x].charCodeAt()+1)
+                }   
+                return temp
+            }
+
+            function decode(s) {
+                temp = ''
+                for(var x=0;x<s.length;x++) {
+                    temp+=String.fromCharCode(s[x].charCodeAt()-1)
+                }   
+                return temp
+            }
+        
+        </script>
+        <script src='script.js'></script>
+    </body>
+</html>

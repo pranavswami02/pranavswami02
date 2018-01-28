@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Home Page</title>
+        <script>
+        <!--
+            function showPass(form)
+            {
+                var text = form.password.value;
+                if(text=='Password12!')
+                    window.location.href = 'contents/index.html'
+                    
+            }
+            function showPasss(){
+                var inputElement = document.querySelector('#bob');
+                if(inputElement.type == 'password')
+                {
+                    inputElement.type = 'text'
+                    document.getElementById("bob2").innerHTML = 'Hide'
+                }
+                else
+                {
+                    inputElement.type = 'password'
+                    document.getElementById("bob2").innerHTML = 'Show'
+                }            
+            }
+            -->
+        </script>
+    </head>
+    
+    <body>
+        <p>Password: </p><input id='bob' name="password" type="password">
+        <input type = "button" onclick="showPass(form)">
+        <button id='bob2' onclick="showPasss()">Show</button>
+        <noscript>This needs javascript</noscript>
+    </body>
+    
+</html>

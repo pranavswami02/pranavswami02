@@ -1,0 +1,82 @@
+body {
+    background: black;
+}
+
+img {
+    opacity: 0.5;
+    width: 20%;
+    margin:0;
+    padding: 0;
+    padding-right: 10%;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+h1 {
+    color: red;
+}
+
+.ultimate {
+    color: yellow;
+    text-align: center;
+}
+
+h2 {
+    padding-left:4%;
+    color: blue;
+}
+
+h3 {
+    color: white;
+    padding-left: 8%;
+}
+
+a {
+    font-size: 150%;
+    text-decoration: none;
+    color: green;
+}
+
+a:hover {
+    color:blueviolet;
+}
+
+object {
+    opacity: 0.5;
+    width: 50%;
+    margin:0;
+    padding: 5%;
+    height: 500px;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; 
+}
+
+object:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.text {
+    float: right;
+    width: 40%;
+}
+
+.attachments {
+    float: left;
+    width:60%;
+}

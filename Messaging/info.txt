@@ -1,0 +1,3 @@
+This is a messaging web app that I have created. It uses firebase, an online Real Time Database, to store the messages on an online database. It uses the languages HTML, CSS, and JavaScript.
+
+The webpage is online at the url: rishavb123.github.io/Messaging OR go to rishavb123.github.io and click the Messaging link

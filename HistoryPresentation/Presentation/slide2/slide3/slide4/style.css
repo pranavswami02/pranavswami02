@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+    color: yellow;
+}
+
+body {
+    background-color: #737489;
+}
+
+img {
+    width: 23%;
+    padding-right: 1%;
+    padding-left: 1%;
+    float: left;
+}
+
+p.arrow {
+    margin: 0;
+    font-size: 2000%;
+    display: inline-block;
+}
+
+.city {
+    float: right;
+    margin-right: 7%;
+    margin-top: 4%;
+}
+
+b.text {
+    text-align: center;
+    font-size: 300%;
+    color: blue;
+    letter-spacing: 5px;
+    
+}
+
+p.yearlyThemes {
+    color: rgb(0, 255, 0);
+    font-size: 200%;
+}
