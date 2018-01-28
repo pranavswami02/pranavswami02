@@ -19,4 +19,3 @@ function update() {
     if(pass==decode('dpefxfc'))    
         htmlDbRef.set(text)
 }
-
