@@ -18,4 +18,5 @@ function update() {
     var text = document.getElementById('textfield').value
     if(pass==decode('dpefxfc'))    
         htmlDbRef.set(text)
+    window.open('rishavb123.github.io/HtmlLive','_blank');
 }
