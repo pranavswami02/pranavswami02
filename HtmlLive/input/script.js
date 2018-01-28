@@ -14,6 +14,10 @@ var dbRef = firebase.database().ref()
 
 var htmlDbRef = dbRef.child('html')
 
+window.onload = function() {
+    document.body.scrollTop = document.body.scrollHeight
+}
+
 function update() {
     var text = document.getElementById('textfield').value
     if(pass==decode('dpefxfc'))    
