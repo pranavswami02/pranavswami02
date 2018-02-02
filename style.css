@@ -1,0 +1,22 @@
+/*Navigation*/
+
+.nav {
+    background-color: rgba(0, 0, 0, 0.53)
+}
+
+.nav-link {
+    color: #0f0;
+    transition: font-size 1s, border 1s;
+}
+
+.nav-link:hover {
+    color: #00be00;
+    font-size: 120%;
+    border-bottom: 5px solid #00be00;
+}
+
+/*Header*/
+
+header {
+    
+}
