@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title id="title">Thanks for Submitting Your Code</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <script>
+            function thanks() {
+                var body = document.getElementById('body')
+                body.innerHTML= body.innerHTML+"<p class='label thanks'>Thanks for Submitting Your Code</p>"
+            }
+            addEventListener('keydown', function() {
+                thanks()
+            })
+        </script>
+    </head>
+    <body id="body" onclick="thanks()">
+        
+        <p class="label thanks">Thanks for Submitting Your Code</p>       
+    </body>
+</html>

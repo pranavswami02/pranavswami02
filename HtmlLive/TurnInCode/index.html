@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title">Current</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <form>
+            <h1 id="formTitle">Current</h1>
+            
+            <p class="label">Name: </p>
+            <input type="text" spellcheck="false" placeholder="Enter your name here" id="name">
+            
+            <p class="label">Email: </p>
+            <input type="email" spellcheck="false" placeholder="Enter your email here" id="email">
+            
+            <p class="label">ID: </p>
+            <input type="text" spellcheck="false" placeholder="Enter your ID here" id="id">
+            
+            <p class="label">Code: </p>
+            <textarea cols="40" rows="5" placeholder="Enter your code here" id="code" spellcheck="false"></textarea>
+            
+        </form>
+        
+        <button onclick="submit()">Submit</button>
+        
+        
+        <script src='https://www.gstatic.com/firebasejs/4.9.0/firebase.js'></script>
+        <script src='app.js'></script>
+    </body>
+</html>

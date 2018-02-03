@@ -1,0 +1,26 @@
+button {
+    margin-top: 4%;
+    margin-left: 5%;
+    width:10%;
+    height: 5%;
+}
+
+input[type=text] {
+}
+
+#content {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    padding-bottom: 5%;
+    margin-top: 30%;
+}
+
+
+html, body {
+    background: linear-gradient(135deg, red, red, orange, yellow, green, blue, indigo, violet);
+}
+
+h1 {
+    padding-top: 5%;
+}

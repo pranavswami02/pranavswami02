@@ -1,0 +1,50 @@
+pre {
+    float:left;
+    width: 100%;
+    background-color: #e8e4e4;
+    margin: 0;
+}
+
+#code {
+    color: black;
+    margin: 0;
+}
+
+.ang-brace {
+    color: green;
+}
+
+.tag {
+    color: purple;
+}
+
+.key {
+    font-weight: bold;
+    color: cadetblue;
+}
+
+.value {
+    color: chartreuse
+}
+
+html,body {
+    background-color: black;
+}
+
+#info {
+    background-color: #444;
+    padding-bottom: 0;
+    margin-bottom: 05;
+}
+
+.copy {
+    float: right;
+    width: 2%;
+    height: 100%;
+    background-color: white;
+    height: 0px;
+}
+
+img {
+    height: 100%;
+}
