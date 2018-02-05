@@ -47,14 +47,44 @@ childRef.on('value', function(snap) {
     if(data==null)
         data = []
     var infoDiv = document.getElementById('info')
-    infoDiv.innerHTML = "<span class='key'>Name: </span><span class='value'>"+data[index].name+"</span> <span class='key'>Email: </span> <span class='value'>"+data[index].email+"</span> <span class='key'>ID: </span> <span class='value'>"+data[index].id+"</span><button class='copy' onclick='copyToClip()'><img src='https://camo.githubusercontent.com/84a37ebae7c3ec772c449f9f16cdbd08334f6e01/68747470733a2f2f636c6970626f6172646a732e636f6d2f6173736574732f696d616765732f636c697070792e737667'/></button>"
-    var str = data[index].code.replace(/</g,'&lt;').replace(/>/g,'&gt;</span>')
+    infoDiv.innerHTML = "<span class='key'>Name: </span><span class='value'>"+data[index].name+"</span> <span class='key'>Email: </span> <span class='value'>"+data[index].email+"</span> <span class='key'>ID: </span> <span class='value'>"+data[index].id+"</span><button class='copy' onclick='copyToClip()'>copy</button>"
+    var str = data[index].code
+    
+    str = str.replace(/"/g,'😁')
+    str = str.replace(/=/g,'😄')
+    
+    str = str.replace(/</g,'&lt;').replace(/>/g,'&gt;</span>')
     
     str = str.replace(/&lt;/g,'<span class="ang-brace">&lt;</span><span class="tag">')
     str = str.replace(/&gt;/g,'</span><span class="ang-brace">&gt;</span>')
     
+    
+    str = str.replace(/😄/g,"<span class='equals-sign'>=</span>")
+    arr = str.split('😁')
+        
+    str=arr[0]
+    
+    for(var x=1; x<arr.length;x++) {
+        if(x%2==1) {
+            str+='<span class="string">"'+arr[x]
+        } else {
+            str+='"</span>'+arr[x]
+        }
+    }
+    
     var codeTag = document.getElementById('code')
     codeTag.innerHTML = str
+    
+    var tags = document.getElementsByClassName('tag')
+    
+    for(var x=0;x<tags.length;x++) {
+        var s = tags[x].innerHTML
+        s=s.replace(" "," <span class='attributes'>")
+        if(s.indexOf(" <span class='attributes'>")>-1)    
+           s+="</span>"
+        
+        tags[x].innerHTML=s
+    }
 })
 
 

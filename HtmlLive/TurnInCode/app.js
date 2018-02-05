@@ -11,6 +11,7 @@ firebase.initializeApp(config)
 var data = []
 
 var title = location.href.split("?").length==1 ? "current" : (location.href.split("?")[1].split("=")[0]=="title"?location.href.split("?")[1].split("=")[1]:"current")
+
 if(title==""||title==null)
     title="current"
 displayTitle = capitalize(title)
