@@ -41,12 +41,40 @@ function submit() {
     
     var studentRef = childRef.child(data.length)
     var d = new Date()
+    var sourceUrl
+    var url
+    
+    get_short_url("https://rishavb123.github.io/HtmlLive/Webpages?"+pageTitle+"/index="+data.length, function(short_url) {
+        url=short_url
+    });
+    
     studentRef.set({
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         id: document.getElementById('id').value,
         code: document.getElementById('code').value,
-        datatime: d.toString()
+        datatime: d.toString(),
     })
-    location.href = "submitted.html"
+    location.href = "submitted.html?"+url;
 }
+
+//https://tinyurl.com/api-create.php?url="+bigurl
+function get_short_url(long_url, func)
+{
+    $.getJSON(
+        "http://api.bitly.com/v3/shorten?callback=?", 
+        { 
+            "format": "json",
+            "apiKey": "R_3f041f721fc14727a301fee9de2ad41a",
+            "login": "rishavb123",
+            "longUrl": long_url
+        },
+        function(response)
+        {
+            func(response.data.url);
+        }
+    );
+}
+get_short_url("https://rishavb123.github.io", function(short_url) {
+    console.log(short_url)
+});
