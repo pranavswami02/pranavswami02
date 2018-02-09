@@ -27,6 +27,7 @@
                 var copyText = document.getElementsByTagName("a")[0]
                 selectElementTest(copyText)
                 document.execCommand("Copy")
+                window.getSelection().removeAllRanges();
 
             }
 
