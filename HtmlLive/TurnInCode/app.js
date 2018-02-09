@@ -12,8 +12,11 @@ var data = []
 
 var title = location.href.split("?").length==1 ? "current" : (location.href.split("?")[1].split("=")[0]=="title"?location.href.split("?")[1].split("=")[1]:"current")
 
+console.log(title)
+
 if(title==""||title==null)
     title="current"
+title = title.toLowerCase()
 displayTitle = capitalize(title)
 
 
@@ -25,6 +28,18 @@ pageTitle.innerHTML = displayTitle
 
 var dbRef = firebase.database().ref()
 var childRef = dbRef.child(title)
+var overrideRef = dbRef.child("OverrideDisabled")
+
+overrideRef.on('value', function(snap) {
+    titles = snap.val()
+    for(var x=0;x<titles.length;x++) {
+        if(title == titles[x]) {
+            document.getElementById("overide").style.display="none"
+            break
+        }
+            
+    }
+})
 
 childRef.on('value', function(snap) {
     data = snap.val()
