@@ -8,8 +8,6 @@ var config = {
 };
 firebase.initializeApp(config)
 
-location.href = location.href.replace('https','http')
-
 var data = []
 
 var title = location.href.split("?").length==1 ? "current" : (location.href.split("?")[1].split("=")[0]=="title"?location.href.split("?")[1].split("=")[1]:"current")
