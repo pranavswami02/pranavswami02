@@ -3,7 +3,16 @@
     <head>
         <title id="title">Thanks for Submitting Your Code</title>
         <link href="style.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    <body id="body">
+        
+        <p class="label thanks first">Thanks for Submitting Your Code</p> 
+        
+        <button id="btn">Copy Url</button>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         <script>
+            
             function thanks() {
                 var url = (location.href.split("?").length>1)? location.href.split("?")[1]: ""
                 var body = document.getElementById('body')
@@ -14,7 +23,7 @@
             })
             
             function copyToClip() {
-    
+                                
                 var copyText = document.getElementsByTagName("a")[0]
                 selectElementTest(copyText)
                 document.execCommand("Copy")
@@ -28,13 +37,14 @@
                 selection.removeAllRanges()
                 selection.addRange(range);
             }
+            
+            $('body').click(function(event) {
+                thanks()
+                if(event.target.id == 'btn') {
+                    copyToClip()
+                }
+            })
+            
         </script>
-    </head>
-    <body id="body" onclick="thanks()">
-        
-        <p class="label thanks first">Thanks for Submitting Your Code</p> 
-        
-        <button onclick="copyToClip()">Copy Url</button>
-        
     </body>
 </html>
