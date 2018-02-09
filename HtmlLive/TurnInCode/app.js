@@ -57,7 +57,7 @@ function submit() {
 function get_short_url(long_url, func)
 {
     $.getJSON(
-        "https://api.bitly.com/v3/shorten?callback=?", 
+        "http://api.bitly.com/v3/shorten?callback=?", 
         { 
             "format": "json",
             "apiKey": "R_3f041f721fc14727a301fee9de2ad41a",
