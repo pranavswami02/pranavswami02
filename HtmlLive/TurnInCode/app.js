@@ -51,6 +51,7 @@ function submit() {
     })
     get_short_url("https://rishavb123.github.io/HtmlLive/Webpages/runner.html?"+title+"/index="+(data.length-1), function(short_url) {
         location.href = "submitted.html?"+short_url
+        studentRef.child('url').set(short_url)
     });
 }
 
