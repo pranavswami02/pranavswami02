@@ -32,6 +32,8 @@ childRef.on('value', function(snap) {
         data = []
 })
 
+
+
 function capitalize(string) 
 {
     return string.charAt(0).toUpperCase() + string.substring(1);
@@ -39,7 +41,7 @@ function capitalize(string)
 
 function submit() {
     
-    var studentRef = childRef.child(data.length)
+    var studentRef = getNewRef()
     var d = new Date()
     
     studentRef.set({
@@ -53,6 +55,30 @@ function submit() {
         location.href = "submitted.html?"+short_url
         studentRef.child('url').set(short_url)
     });
+}
+
+function getNewRef() {
+    var overrideTag = document.getElementById("override")
+    var overrideText = overrideTag.value
+    try {
+        if(overrideText.length==0)
+            throw "Empty"
+        console.log(typeof parseInt(overrideText))
+        if(isNaN(parseInt(overrideText)))
+            throw "NAN ERROR"
+        console.log(parseInt(overrideText))
+        return childRef.child(parseInt(overrideText))
+    } catch(err) {
+        for(var x=0;x<data.length;x++) {
+            if(data[x].url == overrideText)
+            {
+                console.log(data[x].code)
+                return childRef.child(x)
+            }
+        }
+    }
+    
+    return childRef.child(data.length)
 }
 
 function get_short_url(long_url, handler)
