@@ -54,7 +54,7 @@ function submit() {
     });
 }
 
-function get_short_url(long_url, func)
+function get_short_url(long_url, handler)
 {
     $.getJSON(
         "https://api-ssl.bitly.com/v3/shorten?callback=?", 
@@ -66,11 +66,7 @@ function get_short_url(long_url, func)
         },
         function(response)
         {
-            func(response.data.url);
+            handler(response.data.url);
         }
     );
 }
-
-get_short_url("https://rishavb123.github.io/HtmlLive/Webpages/runner.html?"+title+"/index="+data.length, function(short_url) {
-    console.log(short_url)
-});

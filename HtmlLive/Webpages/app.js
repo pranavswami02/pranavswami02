@@ -50,7 +50,7 @@ childRef.on('value', function(snap) {
     data = snap.val()
     if(data==null)
         data = []
-    alert("Database Loaded\nD\nBy: "+data[index].name+"\nEmail: "+data[index].email+"\nID: "+data[index].id)
+    alert("Database Loaded\n-------------------------\nBy: "+data[index].name+"\nEmail: "+data[index].email+"\nID: "+data[index].id)
     var str = data[index].code;
     str = (str.indexOf("</body>")<0)? str+"<script src='app.js' type='text/javascript'></script>": str.replace("</body>","<script src='app.js' type='text/javascript'></script></body>")
     
