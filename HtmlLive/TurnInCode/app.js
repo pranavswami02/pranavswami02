@@ -41,12 +41,6 @@ function submit() {
     
     var studentRef = childRef.child(data.length)
     var d = new Date()
-    var sourceUrl
-    var url
-    
-    get_short_url("https://rishavb123.github.io/HtmlLive/Webpages?"+pageTitle+"/index="+data.length, function(short_url) {
-        url=short_url
-    });
     
     studentRef.set({
         name: document.getElementById('name').value,
@@ -55,10 +49,11 @@ function submit() {
         code: document.getElementById('code').value,
         datatime: d.toString(),
     })
-    location.href = "submitted.html?"+url;
+    get_short_url("https://rishavb123.github.io/HtmlLive/Webpages/runner.html?"+title+"/index="+(data.length-1), function(short_url) {
+        location.href = "submitted.html?"+short_url
+    });
 }
 
-//https://tinyurl.com/api-create.php?url="+bigurl
 function get_short_url(long_url, func)
 {
     $.getJSON(
@@ -75,6 +70,7 @@ function get_short_url(long_url, func)
         }
     );
 }
-get_short_url("https://rishavb123.github.io", function(short_url) {
+
+get_short_url("https://rishavb123.github.io/HtmlLive/Webpages/runner.html?"+title+"/index="+data.length, function(short_url) {
     console.log(short_url)
 });

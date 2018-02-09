@@ -5,16 +5,36 @@
         <link href="style.css" type="text/css" rel="stylesheet">
         <script>
             function thanks() {
+                var url = (location.href.split("?").length>1)? location.href.split("?")[1]: ""
                 var body = document.getElementById('body')
-                body.innerHTML= body.innerHTML+"<p class='label thanks'>Thanks for Submitting Your Code</p>"
+                body.innerHTML= body.innerHTML+"<p class='label thanks'>URL: <a href='"+url+"'>"+url+"</a></p> <p class='label thanks'>Thanks for Submitting Your Code</p>"
             }
             addEventListener('keydown', function() {
                 thanks()
             })
+            
+            function copyToClip() {
+    
+                var copyText = document.getElementsByTagName("a")[0]
+                selectElementTest(copyText)
+                document.execCommand("Copy")
+
+            }
+
+            function selectElementTest(el) {
+                var range = document.createRange();
+                range.selectNodeContents(el)
+                var selection = window.getSelection()
+                selection.removeAllRanges()
+                selection.addRange(range);
+            }
         </script>
     </head>
     <body id="body" onclick="thanks()">
         
-        <p class="label thanks">Thanks for Submitting Your Code</p>       
+        <p class="label thanks first">Thanks for Submitting Your Code</p> 
+        
+        <button onclick="copyToClip()">Copy Url</button>
+        
     </body>
 </html>
