@@ -38,6 +38,10 @@ full.on('value', function(snap){
         msgs+="<p>"+snap.val()[value]+"</p>";
         title.innerHTML = (size<=1)? "Messaging":snap.val()[value];
     }
+    
+    if(snap.val()[snap.val().length-1]=="noise") {
+        document.getElementById("audio").play()
+    }
 
     messages.innerHTML = msgs;
     
