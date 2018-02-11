@@ -43,8 +43,8 @@ full.on('value', function(snap){
     var audio
     
     
-    if(isIn(audioArray, snap.val()[snap.val().length-1])) {
-        var audio = new Audio("audio/"+snap.val()[snap.val().length-1]+".mp3")
+    if(isIn(audioArray, snap.val()[snap.val().length-1].toLowerCase())) {
+        var audio = new Audio("audio/"+snap.val()[snap.val().length-1].toLowerCase()+".mp3")
         audio.play()
     }
 
