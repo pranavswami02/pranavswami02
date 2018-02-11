@@ -22,6 +22,7 @@ var object = {
 }
 
 var size = 0;
+var audioArray = ["bomb","burp","cough","cry","evil laugh","howl","laugh","scream","sneeze"]
 var dbRef = firebase.database().ref()
 var full = dbRef.child("Messages")
 full.on('value', function(snap){
@@ -39,8 +40,13 @@ full.on('value', function(snap){
         title.innerHTML = (size<=1)? "Messaging":snap.val()[value];
     }
     
-    if(snap.val()[snap.val().length-1]=="noise") {
-        document.getElementById("audio").play()
+    var audio
+    
+    console.log(isIn(audioArray, snap.val()[snap.val().length-1]))
+    
+    if(isIn(audioArray, snap.val()[snap.val().length-1])) {
+        var audio = new Audio("audio/"+snap.val()[snap.val().length-1]+".mp3")
+        audio.play()
     }
 
     messages.innerHTML = msgs;
@@ -48,6 +54,14 @@ full.on('value', function(snap){
     updateScroll();
     
 });
+
+function isIn(arr, item) {
+    for(var a in arr) {
+        if(arr[a]==item)
+            return true;
+    }
+    return false;
+}
 
 function enter(e) {
     if( e.keyCode == 13 )
