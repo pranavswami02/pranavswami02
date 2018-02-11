@@ -42,7 +42,6 @@ full.on('value', function(snap){
     
     var audio
     
-    console.log(isIn(audioArray, snap.val()[snap.val().length-1]))
     
     if(isIn(audioArray, snap.val()[snap.val().length-1])) {
         var audio = new Audio("audio/"+snap.val()[snap.val().length-1]+".mp3")
