@@ -95,11 +95,6 @@ header {
 
 /*----------------------------Projects------------------------------------*/
 
-#projects {
-    margin-bottom: 200vh;
-    
-}
-
 #projects-container {
     width: 100%;
 }
@@ -126,6 +121,26 @@ header {
 .btn:first-child {
     width: 40%:
 }
+
+/*-----------------------------------Contact Info---------------------------*/
+
+#contact-info {
+    margin-bottom: 50vh;
+}
+
+#contacts {
+    text-align: center;
+}
+
+.contact {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    font-size: 200%;
+    justify-content: space-between;
+}
+
+
 
 
 
