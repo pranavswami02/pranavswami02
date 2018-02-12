@@ -2,8 +2,43 @@
 <html>
 
     <head>
-        <title>Home Page</title>
+        <title>Minute Photos</title>
+    
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(45deg, blue, red, yellow, red, blue)
+            }
+            
+            img {
+                border-radius: 30px;
+                border: 30px solid #ffffff;
+                opacity: .7;
+                transition: transform 1s, opacity 1s, filter 1s;
+                filter: blur(30px);
+            }
+            
+            img:hover {
+                transform: scale(1.03);
+                opacity: 1;
+                filter: blur(0px);
+            }
+            
+            h1{
+                color: white;
+            }
+            
+            
+        </style>
+    
     </head>
+    
+    
     
     <body>
         <img src="image.jpg" alt="Program not running">
