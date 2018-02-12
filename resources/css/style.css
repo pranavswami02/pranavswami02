@@ -32,6 +32,11 @@ h2:after {
     margin-top: 4vh;
 }
 
+/* font */
+* {
+    font-size: 96.5%;
+}
+
 /*---------------------------------Header----------------------*/
 
 /*Navigation*/
@@ -118,8 +123,8 @@ header {
     justify-content: center;
 }
 
-.btn {
-    margin-right: 2%;
+.btn:first-child {
+    width: 40%:
 }
 
 
