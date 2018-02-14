@@ -47,7 +47,7 @@ childRef.on('value', function(snap) {
     if(data==null)
         data = []
     var infoDiv = document.getElementById('info')
-    infoDiv.innerHTML = "<span class='key'>Name: </span><span class='value'>"+data[index].name+"</span> <span class='key'>Email: </span> <span class='value'>"+data[index].email+"</span> <span class='key'>ID: </span> <span class='value'>"+data[index].id+"</span><button class='copy' onclick='copyToClip()'>copy</button>"
+    infoDiv.innerHTML = "<span class='key'>Name: </span><span class='value'>"+data[index].name+"</span> <span class='key'>Email: </span> <span class='value'>"+data[index].email+"</span> <span class='key'>ID: </span> <span class='value'>"+data[index].id+" <span class='key'>Short-Url: </span> <span class='value'>"+data[index].url+"</span><button class='copy' onclick='copyToClip()'>copy</button>"
     var str = data[index].code
     
     str = str.replace(/"/g,'😁')
