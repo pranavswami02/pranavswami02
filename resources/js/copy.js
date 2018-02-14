@@ -18,3 +18,6 @@ function selectElementTest(el) {
 function contactCopy(index) {
     copyToClip(document.getElementsByClassName('contact-content')[index]);
 }
+function contactNotCopy(index) {
+    copyToClip(document.getElementsByClassName('contact-type')[index]);
+}

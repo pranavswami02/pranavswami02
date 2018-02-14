@@ -140,9 +140,13 @@ header {
     font-size: 200%;
 }
 
-
 .contact-cell {
     display: table-cell;
+}
+
+.cell-number {
+    filter: blur(5px);
+
 }
 
 
