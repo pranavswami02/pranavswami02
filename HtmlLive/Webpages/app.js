@@ -47,10 +47,27 @@ var childRef = dbRef.child(folder)
 
 childRef.on('value', function(snap) {
     data = snap.val()
-    if(data==null)
+    if(data==null) {
         data = []
-    alert("Database Loaded\n-------------------------\nShort-Url: "+data[index].url+"\nBy: "+data[index].name+"\nEmail: "+data[index].email+"\nID: "+data[index].id)
-    var str = data[index].code;
+        return;
+    }
+    var alertMessage = "Database Loaded\n-------------------------"
+    var obj = data[index];
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)&&key!="code") {
+            
+            alertMessage+="\n"+capitalize(key)+": "+obj[key]
+        
+        }
+    }
+    
+    alert(alertMessage)
+    var str
+    try {
+        str = data[index].code;
+    } catch(e) {
+        str = "<img width='200px' height='200px' src='https://images-na.ssl-images-amazon.com/images/I/61gDDm3btfL._SL1000_.jpg'><p style='text-align: center; color: #f22; font-size: 200%; font-weight: bold; background:linear-gradient(blue, green)'>This is an empty location in the database</p>"
+    }
    // str = (str.indexOf("</body>")<0)? str+"<script src='app.js' type='text/javascript'></script>": str.replace("</body>","<script src='app.js' type='text/javascript'></script></body>")
     
     document.write(str)
@@ -68,6 +85,11 @@ addEventListener('keyup', function(e) {
        console.log('key wrote')
     }
 })
+
+function capitalize(string) 
+{
+    return string.charAt(0).toUpperCase() + string.substring(1);
+}
 
 
 
