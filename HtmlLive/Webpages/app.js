@@ -44,13 +44,23 @@ if((folder==""||folder==null)&&url.indexOf('runner')>=0) {
 
 var dbRef = firebase.database().ref()
 var childRef = dbRef.child(folder)
+var done = false;
 
 childRef.on('value', function(snap) {
     data = snap.val()
+    if(done)
+        return;
+    done = true;
     if(data==null) {
         data = []
         return;
     }
+    
+    if(data[index].hasOwnProperty('views'))
+        childRef.child(index).child('views').set(parseInt(data[index]['views'])+1)
+    else
+        childRef.child(index).child('views').set(1)
+    
     var alertMessage = "Database Loaded\n-------------------------"
     var obj = data[index];
     for (var key in obj) {
