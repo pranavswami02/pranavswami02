@@ -129,17 +129,21 @@ header {
 }
 
 #contacts {
-    text-align: center;
+    text-align: left;
+    display: table;
+    width: 80vw;
+    margin-left: 10vw;
 }
 
 .contact {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    display: flex;
+    display: table-row;
     font-size: 200%;
-    justify-content: space-between;
 }
 
+
+.contact-cell {
+    display: table-cell;
+}
 
 
 
