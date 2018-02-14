@@ -43,7 +43,6 @@ if((folder==""||folder==null)&&url.indexOf('runner')>=0) {
 }
 
 var dbRef = firebase.database().ref()
-console.log(folder)
 var childRef = dbRef.child(folder)
 
 childRef.on('value', function(snap) {
@@ -52,7 +51,7 @@ childRef.on('value', function(snap) {
         data = []
     alert("Database Loaded\n-------------------------\nShort-Url: "+data[index].url+"\nBy: "+data[index].name+"\nEmail: "+data[index].email+"\nID: "+data[index].id)
     var str = data[index].code;
-    str = (str.indexOf("</body>")<0)? str+"<script src='app.js' type='text/javascript'></script>": str.replace("</body>","<script src='app.js' type='text/javascript'></script></body>")
+   // str = (str.indexOf("</body>")<0)? str+"<script src='app.js' type='text/javascript'></script>": str.replace("</body>","<script src='app.js' type='text/javascript'></script></body>")
     
     document.write(str)
        
