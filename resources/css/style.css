@@ -105,11 +105,13 @@ header {
     justify-content: center;
     background: linear-gradient(white, #d34e07);
     padding-top: 5%;
+    flex-wrap: wrap;
 }
 
 .project {
     display: inline-block;
     margin-right: 2%;
+    min-width: 300px;
 }
 
 .buttons {
@@ -146,7 +148,6 @@ header {
 
 .cell-number {
     filter: blur(5px);
-
 }
 
 
