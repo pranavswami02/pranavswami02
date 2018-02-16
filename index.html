@@ -214,8 +214,9 @@
                     <div class="contact">
 
                         <span class="contact-type contact-cell">Phone Number: </span>
-                        <span class="contact-content cell-number contact-cell">555-555-5555</span>
-                        <a class="btn btn-success copy-btn contact-cell" onclick="contactNotCopy(0)" data-container="body" data-toggle="popover" data-placement="left" data-content="Copied">Copy</a>
+
+                        <span class="contact-content cell-number contact-cell" onclick="window.getSelection().removeAllRanges()">555-555-5555</span>
+                        <a class="btn btn-success copy-btn contact-cell" onclick="contactNCopy(0)" data-container="body" data-toggle="popover" data-placement="left" data-content="Copied">Copy</a>
 
                     </div>
                     
