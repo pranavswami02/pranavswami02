@@ -2,11 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Log In</title>
   </head>
   <body>
       
+      <div class="container">
+        
+          <input id="txtEmail" type = "email" placeholder="Email">
+          
+          <input id="txtPassword" type = "password" placeholder="Password">
+          
+          <button id="btnLogin" class="btn btn-primary">
+            Log in
+          </button>
+          
+          <button id="btnSignUp" class="btn btn-secondary">
+            Sign Up
+          </button>
+          
+          <button id="btnLogout" class="btn btn-pri hide">
+            Log out
+          </button>
+          
+      </div>
       
-  
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script src="app.js"></script>
+      
   </body>
 </html>
