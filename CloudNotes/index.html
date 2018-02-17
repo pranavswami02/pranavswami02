@@ -9,27 +9,69 @@
   </head>
   <body>
       
-      <div class="container">
+      <div class="container log-in">
         
-          <input id="txtEmail" type = "email" placeholder="Email">
+          <div class='holder' onclick="$('canvas').addClass('blur')">
+              
+              <h1 class='top-header primary'>Cloud Notes</h1>
+              
+              <h1 class='top-header secondary'>Log in or Sign up</h1>
+              
+              <input id="txtEmail" type = "email" placeholder="Email">
+
+              <input id="txtPassword" type = "password" placeholder="Password">
+              
+              <span class="warning hide">!</span><span id="error-output"></span>
+              
+              <div class='auth-buttons'>
+                  
+                  <button id="btnLogin" class="btn btn-primary">
+                    Log in
+                  </button>
+
+                  <button id="btnSignUp" class="btn btn-secondary">
+                    Sign Up
+                  </button>
+
+                  
+                  
+              </div>
+              
+              
+              
+          </div>
           
-          <input id="txtPassword" type = "password" placeholder="Password">
-          
-          <button id="btnLogin" class="btn btn-primary">
-            Log in
-          </button>
-          
-          <button id="btnSignUp" class="btn btn-secondary">
-            Sign Up
-          </button>
-          
-          <button id="btnLogout" class="btn btn-pri hide">
-            Log out
-          </button>
+         <canvas id="canvas"></canvas>
           
       </div>
       
+      <div class="main-app hide">
+          
+        <h1 class='page-title'>Cloud Notes</h1>
+        
+        <div class='search-holder'>
+            <input type="text" placeholder="Search" class='search-box'>
+            <button id="btnSearch" class='btn'>Search</button>
+        </div>
+            
+        <div class='notes-holder'>         
+            
+            <ul id="notes">
+
+                <li></li>
+
+            </ul>
+          
+        </div>
+
+        <button id="btnLogout" class="btn"><h1>Log out</h1></button>
+          
+      </div>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script src="canvas.js"></script>
+      <script src="log-in.js"></script>
       <script src="app.js"></script>
       
   </body>
