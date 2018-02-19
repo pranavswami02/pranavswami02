@@ -37,7 +37,7 @@ function breakUp(str) {
     return arr;
 }
 
-function String(x,y,opacity) {
+function StringObj(x,y,opacity) {
     this.x = x;
     this.y = y;
     this.opacity = opacity;
@@ -139,7 +139,7 @@ function newString()
     if(opacity<.5)
         opacity*=2;
 
-    return new String(randInt(0,cellindex)*fontsize,randInt(0,cellindex2)*fontsize,opacity);
+    return new StringObj(randInt(0,cellindex)*fontsize,randInt(0,cellindex2)*fontsize,opacity);
 }
 
 function newPosX() {

@@ -11,7 +11,7 @@ html,body {
     overflow-y: hidden;
 }
 .container {
-    width: 20%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -45,6 +45,7 @@ html,body {
     background-image: url(log-in-background.jpg);
     background-size: cover;
     border-radius: 150px;
+    width: 100%;
 }
 
 #canvas {
@@ -58,7 +59,7 @@ html,body {
 }
 
 .blur {
-    filter: blur(10px);
+    filter: blur(3px);
 }
 
 .top-header {
@@ -134,13 +135,149 @@ html,body {
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
+    text-align: center;
 }
 
-li {
-    width: 400px;
-    height: 400px;
-    display: inline-block;
-    border: solid;
+.note {
+    width: 20vw;
+    height: 20vw;
+    margin: 2vw;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: transform 1s;
+    border: 2px solid black;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.note:hover {
+    transform: scale(1.2);
+}
+
+.note-title {
+    color: white;
+    background: linear-gradient(black, gray);
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.note-title:hover {
+    background: linear-gradient(90deg, blue, purple);
+    z-index: 1;
+}
+
+.note-content {
+    display: block;
+    background: linear-gradient(#eae8e8,#eae8e8); 
+    height: 100%;
+    margin: 0;
+    text-align: left;
+    padding-left: 5px;
+    transition: color 1s, background 1s;
+    overflow: hidden;
+}
+
+.note-content:hover {
+    background: linear-gradient(135deg, red, orange, yellow);
+    color: aqua;
+}
+
+.new-note {
+    background-image: url('plus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.new-note:hover {
+    background-image: url('plus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-app {
+    transition: filter 1s;
+}
+
+.editor-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor {
+    width: 80vw;
+    height: 60vh;
+    z-index: 2;
+}
+
+#updated-note {
+    width: 100%;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    font-size: 110%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background: linear-gradient(#fff,#fff)
+}
+
+.title-input {
+    width: 95%;
+    height: 15%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #0f0;
+}
+
+.editor-title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#close {
+    width: 5%;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    color: black;
+    transition: color 1s;
+}
+
+#close:hover {
+    color: white;
+}
+
+.editor-last-edited {
+    width: 100%;
+    height: 5%;
+    font-size: 120%;
+    display: block;
+    background-color: #eee;
+    overflow: show;
+    padding-left: 1vw;
+}
+
+.note-delete {
+    background-color: red;
+    color: yellow;
+    border-radius: 10px;
+    font-size: 110;
+    float: right;
+    position: relative;
+    bottom: 4vh;
 }
 
 .hide {

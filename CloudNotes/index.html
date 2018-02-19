@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Log In</title>
@@ -48,7 +48,7 @@
         <h1 class='page-title'>Cloud Notes</h1>
         
         <div class='search-holder'>
-            <input type="text" placeholder="Search" class='search-box'>
+            <input type="text" placeholder="Search" class='search-box' id="search-bar">
             <button id="btnSearch" class='btn'>Search</button>
         </div>
             
@@ -61,6 +61,19 @@
         </div>
 
         <button id="btnLogout" class="btn"><h1>Log out</h1></button>
+          
+      </div>
+      
+      <div class='editor-wrapper hide'>
+        
+          <div class='editor' id='editor' data-index='-1'>
+            
+            <h1 class='editor-title'><input class='title-input' id="title-input" type='text'><button id='close' onclick="closeEditor()">X</button></h1>
+            <span class='editor-last-edited' id='editor-last-edited'></span>
+            <textarea id='updated-note'></textarea>
+            <button class='note-delete' onclick='noteDelete()'>Delete Note</button>
+              
+          </div>
           
       </div>
       
