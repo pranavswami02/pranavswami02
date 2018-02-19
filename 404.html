@@ -5,11 +5,89 @@
         
         <title>Page Not Found</title>
         
+        <style>
+        
+            canvas {
+                background-color: black;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            
+            h1 {
+                color: white;
+                text-align: center;
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            a{
+                color: white;
+            }
+            
+            #text404 {
+                border-bottom: 2px solid white;
+            }
+            
+            iframe {
+                width: 40vw;
+                height: 30vh;
+                position: absolute;
+            }
+            
+            .projects {
+                width: 20vw;
+                height: 100vh;
+                top: 0;
+            }
+            
+            .num1 {
+                left: 0;
+            }
+            
+            .num2 {
+                right: 0;
+            }
+            
+            .num3 {
+                top: 0;
+            }
+            
+            .num4 {
+                bottom: 0;
+            }
+        
+        </style>
+        
     </head>    
 
     <body>
+        
+        <canvas></canvas>
     
-        <p>404: This Page Does Not Exist on <a href='rishavb123.github.io'>rishavb123.github.io</a></p>
+        <iframe src="https://rishavb123.github.io" class="num3"></iframe>
+        
+        <h1><span id="text404">404</span><br><br> This Page Does Not Exist<br> Visit <a href='rishavb123.github.io'>rishavb123.github.io</a> to Check out my Website Instead</h1>
+        
+        <iframe src="https://rishavb123.github.io"class="num4"></iframe>
+        
+        <iframe class='projects num1' src="https://rishavb123.github.io#projects"></iframe>
+        <iframe class='projects num2' src="https://rishavb123.github.io#projects"></iframe>
+        
+        <script src='CloudNotes/canvas.js'></script>
         
     </body>
     
