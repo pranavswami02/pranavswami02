@@ -39,8 +39,7 @@ full.on('value', function(snap){
         msgs+="<p>"+snap.val()[value]+"</p>";
         title.innerHTML = (size<=1)? "Messaging":snap.val()[value];
     }
-    
-    var audio
+
     
     
     if(isIn(audioArray, snap.val()[snap.val().length-1].toLowerCase())) {

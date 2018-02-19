@@ -1,0 +1,48 @@
+body {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#input-code {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    color: #0f0;
+    width: 100vw;
+    height: 50vh;
+    overflow: scroll;
+    font-size: 120%;
+}
+
+pre {
+    font-size: 120%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 45vh;
+    overflow: scroll;
+    background: linear-gradient(135deg, red, blue);
+    color: #fff;
+}
+
+button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10vw;
+    height: 5vh;
+    font-size: 120%;
+    background: linear-gradient(90deg ,blue, blue, white, blue,blue );
+    transition: background 10s, font-size 1s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, blue, white, blue);
+    font-size: 140%;
+}
