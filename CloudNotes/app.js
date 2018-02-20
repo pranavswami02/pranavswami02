@@ -152,13 +152,13 @@ function noteDelete() {
 
 function removeData(index) {
     for(var x=index;x<data.length-1;x++) {
-        userRef.child(x).set(data[index+1])
+        userRef.child(x).set(data[x+1])
     }
     userRef.child(data.length-1).remove()
 }
 
 var months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
-var properResponses = ["yes","totally","yup","imsure","ofcourse","whynot","definitely","gladly","i'msure"]
+var properResponses = ["yes","totally","yup","ya","imsure","ofcourse","whynot","definitely","gladly","i'msure"]
 
 function closeEditor() {
     $('.editor-wrapper').addClass('hide')
