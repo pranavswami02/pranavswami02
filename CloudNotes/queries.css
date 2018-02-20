@@ -15,11 +15,17 @@
     #close {
         width: 7%;
     }
+    .title-input {
+        width: 93%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     #close {
         width: 10%;
+    }
+    .title-input {
+        width: 90%;
     }
 }
 
@@ -27,10 +33,7 @@
     #close {
         width: 15%;
     }
-}
-
-@media only screen and (max-width: 250px) {
-    #close {
-        width: 40px;
+    .title-input {
+        width: 85%;
     }
 }
