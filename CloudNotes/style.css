@@ -123,8 +123,9 @@ html,body {
     margin-top: 1vh;
 }
 .search-box {
-    width: 20vw;
+    width: 60vw;
     font-size: 150%;
+    text-align: center;
 }
 
 .notes-holder {

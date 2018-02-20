@@ -142,7 +142,6 @@ function editor(index) {
 
 function noteDelete() {
     var entry = prompt("Are You Sure That You Want To Delete This Note? ")
-    console.log(!isIn(properResponses, entry.toLowerCase().replace(/ /g,'')))
     if(!isIn(properResponses, entry.toLowerCase().replace(/ /g,'')))
         return;
     var edit = document.getElementById('editor')
@@ -162,7 +161,6 @@ var months = ["January","February","March","April","May","June","July","August",
 var properResponses = ["yes","totally","yup","imsure","ofcourse","whynot","definitely","gladly","i'msure"]
 
 function closeEditor() {
-    console.log('closed')
     $('.editor-wrapper').addClass('hide')
     $('.main-app').removeClass('blur')
 }
