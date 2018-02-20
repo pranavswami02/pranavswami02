@@ -135,7 +135,7 @@ function editor(index) {
     var updatedNote = document.getElementById('updated-note')
 
     titleInput.value = dbData["title"]
-    lastEditedArea.innerHTML = "Last Edited: "+dbData["last-edited"]
+    lastEditedArea.innerHTML =dbData["last-edited"]
     updatedNote.value = dbData["note"]
     
 }

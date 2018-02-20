@@ -249,6 +249,7 @@ html,body {
 
 #close {
     width: 5%;
+    min-width: 40px;
     margin: 0;
     padding: 0;
     background-color: red;
@@ -262,7 +263,6 @@ html,body {
 
 .editor-last-edited {
     width: 100%;
-    height: 5%;
     font-size: 120%;
     display: block;
     background-color: #eee;
@@ -274,7 +274,7 @@ html,body {
     background-color: red;
     color: yellow;
     border-radius: 10px;
-    font-size: 110;
+    font-size: 120%;
     float: right;
     position: relative;
     bottom: 4vh;
