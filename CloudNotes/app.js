@@ -14,7 +14,7 @@ const btnLogin = document.getElementById('btnLogin')
 const btnSignUp = document.getElementById('btnSignUp')
 const btnLogout = document.getElementById('btnLogout')
 const errorOutput = document.getElementById('error-output')
-
+    
 function outputError(e) {
     errorOutput.innerHTML = e.message
     $('.warning').removeClass('hide')

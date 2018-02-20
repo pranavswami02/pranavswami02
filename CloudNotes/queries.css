@@ -4,3 +4,33 @@
         align-self: center;
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .editor {
+        width:100vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #close {
+        width: 7%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #close {
+        width: 10%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #close {
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    #close {
+        width: 40px;
+    }
+}
