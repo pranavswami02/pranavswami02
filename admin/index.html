@@ -20,9 +20,41 @@
     
     <body>
         
+         <div class="container admin-login">
         
+          <div class='admin-login-holder' onclick="$('canvas').addClass('blur')">
+              
+              <h1 class='top-header primary'>Cloud Notes</h1>
+              
+              <h1 class='top-header secondary'>Log in or Sign up</h1>
+              
+              <input id="txtEmail" type = "email" placeholder="Email">
+
+              <input id="txtPassword" type = "password" placeholder="Password">
+              
+              <span class="warning hide">!</span><span id="error-output"></span>
+              
+              <div class='auth-buttons'>
+                  
+                  <button id="btnLogin" class="btn btn-primary">
+                    Log in
+                  </button>
+
+                  <button id="btnSignUp" class="btn btn-secondary">
+                    Sign Up
+                  </button>
+                  
+              </div>
+              
+              
+              
+          </div>
+          
+         <canvas class="admin-canvas"></canvas>
+          
+      </div>
         
-        <div class="content">
+        <div class="content hide">
             <div class="header">
                 <header>
                     
@@ -286,6 +318,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../CloudNotes/canvas.js"></script>
         <script src="../vendors/js/jquery.waypoints.min.js"></script>
         <script src="../resources/js/waypoints.js"></script>
         <script src="../resources/js/copy.js"></script>

@@ -151,6 +151,35 @@ header {
 }
 
 
+/*--------------------------------------Admin----------------------------------*/
+
+.admin-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.admin-login-holder {
+    background-image: url("../../CloudNotes/log-in-background.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 150px;
+}
+
+.admin-canvas {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
 /*---------------------------------Other Final ------------------------------------*/
 .unblur {
     transition: filter 1s;
