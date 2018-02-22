@@ -151,8 +151,15 @@ header {
 }
 
 
+/*---------------------------------Other Final ------------------------------------*/
+.unblur {
+    transition: filter 1s;
+    filter: blur(0);
+}
 
-
+.hide {
+    display: none;
+}
 
 
 

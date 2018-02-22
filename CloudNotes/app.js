@@ -85,6 +85,12 @@ var userRef
 data = []
 
 document.getElementById('search-bar').addEventListener('keyup', function() {
+    
+    search()
+    
+})
+
+function search() {
     var input = document.getElementById('search-bar').value.toLowerCase()
     var li = document.getElementById('notes').getElementsByTagName('li')
     
@@ -97,8 +103,7 @@ document.getElementById('search-bar').addEventListener('keyup', function() {
         }
                 
     }
-    
-})
+}
 
 document.getElementById('editor').addEventListener('keyup', function() {
     var edit = document.getElementById('editor')
@@ -205,6 +210,10 @@ function app() {
             }
             
             document.getElementById('notes').innerHTML+="<li class='note' onclick='newNote()'><h2 class='note-title inside-list'>New Note</h2><span class='new-note note-content inside-list'></span></li>"
+            
+            if(document.getElementById('search-bar').value.length!=0) {
+                search()
+            }
             
         })
         var innerCode = ""
